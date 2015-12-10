@@ -38,18 +38,21 @@ module Example
 
     # Subcommand with no arguments
     # SLACK: /example test0
+    desc "test0", "Subcommand 0 description."
     def test0
       set_response_text("Subcommand: test0")
     end
 
     # Subcommand with one argument
     # SLACK: /example test1 text
+    desc "test1 [TEXT]", "Subcommand 1 description."
     def test1(text)
       set_response_text("Subcommand: test1; Text: #{text}")
     end
 
     # No subcommand with one argument
     # SLACK: /example text
+    desc "[TEXT]", "Root command description."
     def ___(text)
       set_response_text("Root command; Text: #{text}")
     end
