@@ -18,6 +18,10 @@ $ bundle install
 $ ruby app.rb
 ```
 
+You'll eventually want to deploy this to a server to which Slack can send requests.
+Here's a [handy guide](https://www.digitalocean.com/community/tutorials/how-to-deploy-sinatra-based-ruby-web-applications-on-ubuntu-13)
+for deploying a Sinatra app with Unicorn (or Passenger) and Nginx.
+
 ### Usage
 
 Define custom command classes in the `commands/` directory. An example
